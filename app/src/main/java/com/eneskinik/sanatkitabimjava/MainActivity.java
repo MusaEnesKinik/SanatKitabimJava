@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         try {
 
             SQLiteDatabase sqLiteDatabase = this.openOrCreateDatabase("Sanatlar", MODE_PRIVATE, null);
-            sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS sanatlar (id INTEGER PRIMARY KEY, sanatismi VARCHAR, sanatciismi VARCHAR, yil VARCHAR, resim BLOB)");
+           // sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS sanatlar (id INTEGER PRIMARY KEY, sanatismi VARCHAR, sanatciismi VARCHAR, yil VARCHAR, resim BLOB)");
 
             Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM sanatlar", null);
             int isimIx = cursor.getColumnIndex("sanatismi");
